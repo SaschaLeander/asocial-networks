@@ -27,8 +27,8 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--serif);
-  font-size: 18px;
+  font-family: var(--sans);
+  font-size: 14px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -94,7 +94,7 @@ a:hover { color: var(--coral); text-decoration: underline; text-underline-offset
 
 .nav a {
   font-family: var(--sans);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.01em;
   color: #d7d9dc;
@@ -142,121 +142,34 @@ a:hover { color: var(--coral); text-decoration: underline; text-underline-offset
   margin: 0 0 18px;
 }
 
+/* The one deliberately large element: the page title */
 h1.headline {
   font-family: var(--sans);
   font-weight: 800;
-  font-size: clamp(38px, 6.5vw, 68px);
-  line-height: 1.02;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   margin: 0 0 28px;
 }
 
-h2 {
-  font-family: var(--sans);
-  font-weight: 800;
-  font-size: 26px;
-  letter-spacing: -0.01em;
-  margin: 48px 0 16px;
-}
+.content p { margin: 0 0 20px; }
 
-.lede {
-  font-size: clamp(20px, 2.6vw, 25px);
-  line-height: 1.5;
-  margin: 0 0 30px;
+/* Plain "coming soon" note on section pages */
+.coming {
+  color: var(--ink-soft);
+  margin-top: 6px;
 }
-
-.content p { margin: 0 0 22px; }
-
-/* Dashed coral rule — echoes the "broken connection" motif in the icon */
-.rule {
-  border: 0;
-  border-top: 2px dashed var(--coral);
-  width: 64px;
-  margin: 40px 0;
-  opacity: .85;
-}
-
-/* ---------- Aims (two-fold) ---------------------------------------------- */
-
-.aims {
-  list-style: none;
-  counter-reset: aim;
-  padding: 0;
-  margin: 8px 0 8px;
-  display: grid;
-  gap: 20px;
-}
-.aims li {
-  counter-increment: aim;
-  position: relative;
-  background: var(--paper-soft);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 26px 28px 26px 78px;
-}
-.aims li::before {
-  content: counter(aim, decimal-leading-zero);
-  position: absolute;
-  left: 26px; top: 24px;
-  font-family: var(--sans);
-  font-weight: 800;
-  font-size: 26px;
-  color: var(--coral);
-  line-height: 1;
-}
-.aims p { margin: 0; }
 
 /* ---------- Colophon / note ---------------------------------------------- */
 
 .note {
-  margin-top: 56px;
-  padding-top: 26px;
+  margin-top: 40px;
+  padding-top: 22px;
   border-top: 1px solid var(--line);
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.6;
   color: var(--ink-soft);
-}
-
-/* ---------- Section-page placeholders ------------------------------------ */
-
-.placeholder {
-  margin-top: 34px;
-  padding: 40px;
-  background: var(--paper-soft);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  font-family: var(--sans);
-  color: var(--ink-soft);
-}
-.placeholder strong { color: var(--ink); }
-
-/* Images gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-  margin-top: 34px;
-}
-.gallery figure {
-  margin: 0;
-  background: var(--paper-soft);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 18px;
-  text-align: center;
-}
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-}
-.gallery figcaption {
-  font-family: var(--sans);
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin-top: 12px;
 }
 
 /* ---------- Responsive ---------------------------------------------------- */
